@@ -1,56 +1,60 @@
 "use client";
-import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import L from "leaflet";
 import { useEffect, useState } from "react";
 
-// Fix for default Leaflet icon paths in Next.js
-const customIcon = new L.Icon({
-  iconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
-  iconRetinaUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
-  shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-});
-
 export default function Map() {
   const [centers, setCenters] = useState([]);
-  const davaoCoords = [7.091225859059716, 125.60905969569896];
-   
+  const [selectedCenter, setSelectedCenter] = useState(null);
 
   useEffect(() => {
-    // Fetching the Data Engine
-    fetch("/centers.json")
-      .then((res) => res.json())
-      .then((data) => setCenters(data))
-      .catch((err) => console.error("Error loading centers:", err));
+    fetch("/centers.json").then(res => res.json()).then(setCenters);
   }, []);
 
   return (
-    <div className="h-[500px] w-full border-2 border-cyan-400 rounded-lg overflow-hidden glass-morphism">
-      <MapContainer center={davaoCoords} zoom={12} scrollWheelZoom={false} className="h-full w-full">
-        {/* Dark Mode Tiles to match "Industrial Futurism" */}
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-          url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-        />
+    <div className="relative h-[600px] w-full p-4 neo-inset">
+      {/* Left Detail Panel */}
+      <div className={`absolute top-8 left-8 z-[1000] w-80 h-[calc(100%-64px)] 
+        neo-float p-8 transition-all duration-500 ease-out transform 
+        ${selectedCenter ? "translate-x-0 opacity-100" : "-translate-x-[120%] opacity-0"}`}>
         
-        {centers.map((center) => (
-          <Marker key={center.id} position={[center.lat, center.lng]} icon={customIcon}>
-            <Popup className="y2k-popup">
-              <div className="p-2 font-mono">
-                <h3 className="text-lime-400 font-bold uppercase">{center.name}</h3>
-                <p className="text-xs text-slate-300">{center.address}</p>
-                <div className="mt-2 flex flex-wrap gap-1">
-                  {center.types.map((type) => (
-                    <span key={type} className="text-[10px] bg-cyan-900 text-cyan-300 px-1 border border-cyan-500">
-                      {type}
-                    </span>
-                  ))}
-                </div>
+        {selectedCenter && (
+          <div className="flex flex-col h-full text-brand-primary">
+            <button 
+              onClick={() => setSelectedCenter(null)}
+              className="self-end text-[10px] font-bold tracking-widest mb-6 opacity-50 hover:opacity-100">[ CLOSE_DATA ]</button>
+            
+            <h3 className="text-2xl font-black italic uppercase leading-tight mb-2">
+              {selectedCenter.name}
+            </h3>
+            <p className="text-sm font-medium text-brand-secondary mb-6">{selectedCenter.address}</p>
+            
+            <div className="mt-auto">
+              <p className="text-[10px] font-bold uppercase tracking-widest text-brand-accent mb-3">Accepted_Materials:</p>
+              <div className="flex flex-wrap gap-2">
+                {selectedCenter.types.map(t => (
+                  <span key={t} className="px-3 py-1 text-[10px] font-bold border border-brand-accent/40 rounded-full bg-white/10">
+                    {t}
+                  </span>
+                ))}
               </div>
-            </Popup>
-          </Marker>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Actual Map */}
+      <MapContainer center={[7.1907, 125.4553]} zoom={13} className="h-full w-full rounded-2xl">
+        <TileLayer 
+          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png" 
+          className="grayscale contrast-[0.8] opacity-70"
+        />
+        {centers.map(center => (
+          <Marker 
+            key={center.id} 
+            position={[center.lat, center.lng]}
+            eventHandlers={{ click: () => setSelectedCenter(center) }}
+          />
         ))}
       </MapContainer>
     </div>
