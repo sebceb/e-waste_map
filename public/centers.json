@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "SM Lanang", 
+    "city": "Davao City",
     "lat": 7.0992777646302505,
     "lng": 125.63158707288851,
     "address": "3/F, J.P. Laurel Ave., Poblacion, Davao City",
@@ -11,18 +12,40 @@
   {
     "id": 2,
     "name": "SM City Davao", 
+    "city": "Davao City",
     "lat": 7.050874485517081,
     "lng": 125.5882415666896,
-    "address": "Quimpo Blvd, Ecoland, Davao City",
+    "address": "2/F Annex, Quimpo Blvd, Ecoland, Davao City",
     "types": ["Mobile Phones", "Gadgets", "Batteries", "Accessories"]
   },
   
   {
     "id": 3,
-    "name": "Globe E-Waste Zero Bin (Abreeza)", 
+    "name": "Globe E-Waste Zero Bin (Abreeza)",
+    "city": "Davao City", 
     "lat": 7.090824057079079,
     "lng": 125.61156278404209,
-    "address": "J.P Laurel Ave., Poblacion, Davao City",
+    "address": "3/F, J.P Laurel Ave., Poblacion, Davao City",
+    "types": ["Mobile Phones", "Gadgets", "Batteries", "Accessories"]
+  },
+
+  {
+    "id": 4,
+    "name": "Geocycle Philippines (Holcim Philippines Inc.) Davao Plant", 
+    "city": "Davao City",
+    "lat": 7.174756754935303,
+    "lng": 125.6535860811876,
+    "address": "1, Bunawan, Davao City, 8000 Davao del Sur",
+    "types": ["Mobile Phones", "Gadgets", "Batteries", "Accessories"]
+  },
+ 
+  {
+    "id": 5,
+    "name": "Geocycle Philippines Misamis Oriental Plant",
+    "city": "Misamis Oriental",
+    "lat": 8.522981398767282,
+    "lng": 124.75862575767113,
+    "address": "GQF5+2CH, Nestle Tagoloan Warehouse, Tagoloan, Misamis Oriental",
     "types": ["Mobile Phones", "Gadgets", "Batteries", "Accessories"]
   }
 ]

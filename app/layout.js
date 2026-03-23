@@ -12,15 +12,15 @@ const disposeFont = localFont({
   variable: '--font-dispose',
 });
 
-const textFont = localFont({
-  src: '../public/fonts/helvetica_now.ttf',
+const displayFont = localFont({
+  src: '../public/fonts/HelveticaNowDisplay.otf',
   variable:  '--font-text',
 });
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${minFont.variable} ${disposeFont.variable}`}>
-      <body className="bg-white min-h-screen flex flex-col">
+    <html lang="en" className={`${minFont.variable} ${disposeFont.variable} ${displayFont.variable}`}>
+      <body className="bg-white min-h-screen flex flex-col font-text">
         <div className="flex-grow">
           {children}
         </div>
