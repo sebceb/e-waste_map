@@ -11,47 +11,38 @@ export default function Footer() {
           
           {/* Brand & Status */}
           <div className="col-span-1 md:col-span-2 space-y-4">
-            <h2 className="text-xl font-bold tracking-widest text-lime-400 uppercase italic">
-              min<span className="text-cyan-400">DISPOSE</span>_SYS
+            <h2 className="text-xl font-min font-bold text-[#427A43] tracking-widest">
+              min<span className="font-dispose text-[#005F02]">DISPOSE</span>
             </h2>
-            <p className="text-xs text-slate-500 font-mono leading-relaxed max-w-xs">
-              Localized e-waste tracking engine optimized for the Mindanaoan ecological landscape. 
-              Initial deployment: Davao Region [PH_R11].
+            <p className="text-xs text-slate-500 font-text leading-relaxed max-w-xs">
+              Localized e-waste tracking map optimized for the Mindanaoan ecological landscape.
             </p>
-            <div className="flex items-center space-x-2 pt-2">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-500"></span>
-              </span>
-              <span className="text-[10px] font-mono text-lime-400 uppercase tracking-tighter">System_Status: Operational</span>
-            </div>
           </div>
 
           {/* Navigation Links */}
           <div className="space-y-4">
-            <h3 className="text-[10px] font-mono text-slate-400 uppercase border-b border-slate-800 pb-2">Directory</h3>
-            <ul className="space-y-2 text-xs font-mono">
-              <li><a href="#map" className="hover:text-cyan-400 transition-colors">&gt; Interactive_Map</a></li>
-              <li><a href="#about" className="hover:text-cyan-400 transition-colors">&gt; E-Waste_101</a></li>
-              <li><a href="/docs" className="hover:text-cyan-400 transition-colors">&gt; Documentation</a></li>
+            <h3 className="text-[10px] font-text text-slate-400 uppercase border-b border-slate-800 pb-2">Directory</h3>
+            <ul className="space-y-2 text-xs font-text text-slate-500">
+              <li><a href="#map" className="hover:text-lime-400 transition-colors">&gt; Interactive Map</a></li>
+              <li><a href="#about" className="hover:text-lime-400 transition-colors">&gt; E-Waste 101</a></li>
+              <li><a href="/docs" className="hhover:text-lime-400 transition-colors">&gt; Documentation</a></li>
             </ul>
           </div>
 
           {/* Social/External */}
           <div className="space-y-4">
-            <h3 className="text-[10px] font-mono text-slate-400 uppercase border-b border-slate-800 pb-2">External_Nodes</h3>
-            <ul className="space-y-2 text-xs font-mono text-slate-500">
-              <li><a href="#" className="hover:text-lime-400 transition-colors">GitHub_Repository</a></li>
-              <li><a href="#" className="hover:text-lime-400 transition-colors">Developer_Contact</a></li>
-              <li><a href="#" className="hover:text-lime-400 transition-colors">OSM_Contribution</a></li>
+            <h3 className="text-[10px] font-text text-slate-400 uppercase border-b border-slate-800 pb-2">External Links</h3>
+            <ul className="space-y-2 text-xs font-text text-slate-500">
+              <li><a href="#" className="hover:text-lime-400 transition-colors">GitHub Repository</a></li>
+              <li><a href="#" className="hover:text-lime-400 transition-colors">Developer Contact</a></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[10px] font-mono text-slate-600 uppercase">
-            © {currentYear} minDISPOSE // All_Bytes_Reserved.
+          <p className="text-[10px] font-text text-slate-600">
+            © {currentYear} minDISPOSE // all ewastes disposed.
           </p>
           <div className="flex space-x-6 text-[9px] font-mono text-slate-700">
             <span>BUILD: 2026.03.20-ALPHA</span>
