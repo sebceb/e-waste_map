@@ -25,7 +25,7 @@ export default function Footer() {
             <ul className="space-y-2 text-xs font-text text-slate-500">
               <li><a href="#map" className="hover:text-lime-400 transition-colors">&gt; Interactive Map</a></li>
               <li><a href="#about" className="hover:text-lime-400 transition-colors">&gt; E-Waste 101</a></li>
-              <li><a href="/docs" className="hhover:text-lime-400 transition-colors">&gt; Documentation</a></li>
+              <li><a href="/docs" className="hover:text-lime-400 transition-colors">&gt; Documentation</a></li>
             </ul>
           </div>
 
