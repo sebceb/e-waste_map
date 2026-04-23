@@ -24,7 +24,7 @@ export default function Footer() {
             <h3 className="text-[10px] font-text text-slate-400 uppercase border-b border-slate-800 pb-2">Directory</h3>
             <ul className="space-y-2 text-xs font-text text-slate-500">
               <li><a href="#map" className="hover:text-lime-400 transition-colors">&gt; Interactive Map</a></li>
-              <li><a href="#about" className="hover:text-lime-400 transition-colors">&gt; E-Waste 101</a></li>
+              <li><a href="#about" className="hover:text-lime-400 transition-colors">&gt; About E-waste</a></li>
               <li><a href="/docs" className="hover:text-lime-400 transition-colors">&gt; Documentation</a></li>
             </ul>
           </div>
@@ -33,8 +33,8 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-[10px] font-text text-slate-400 uppercase border-b border-slate-800 pb-2">External Links</h3>
             <ul className="space-y-2 text-xs font-text text-slate-500">
-              <li><a href="#" className="hover:text-lime-400 transition-colors">GitHub Repository</a></li>
-              <li><a href="#" className="hover:text-lime-400 transition-colors">Developer Contact</a></li>
+              <li><a href="https://github.com/sebceb/e-waste_map" target="_blank" rel="noopener noreferrer" className="hover:text-lime-400 transition-colors">GitHub Repository</a></li>
+              <li><a href="https://docs.google.com/document/d/1b6xXZN3wJjRkHVxXbAIb1PqLR1yQYs46OnaYQVlYORg/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:text-lime-400 transition-colors">Digital Document</a></li>
             </ul>
           </div>
         </div>
@@ -44,11 +44,6 @@ export default function Footer() {
           <p className="text-[10px] font-text text-slate-600">
             © {currentYear} minDISPOSE // all ewastes disposed.
           </p>
-          <div className="flex space-x-6 text-[9px] font-mono text-slate-700">
-            <span>BUILD: 2026.03.20-ALPHA</span>
-            <span>LAT: 7.1907° N</span>
-            <span>LNG: 125.4553° E</span>
-          </div>
         </div>
       </div>
     </footer>

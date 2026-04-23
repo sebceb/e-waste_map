@@ -19,15 +19,6 @@
     "types": ["Mobile Phones", "Gadgets", "Batteries", "Accessories"]
   },
   
-  {
-    "id": 3,
-    "name": "Globe E-Waste Zero Bin (Abreeza)",
-    "city": "Davao City", 
-    "lat": 7.090824057079079,
-    "lng": 125.61156278404209,
-    "address": "3/F, J.P Laurel Ave., Poblacion, Davao City",
-    "types": ["Mobile Phones", "Gadgets", "Batteries", "Accessories"]
-  },
 
   {
     "id": 4,
@@ -36,16 +27,89 @@
     "lat": 7.174756754935303,
     "lng": 125.6535860811876,
     "address": "1, Bunawan, Davao City, 8000 Davao del Sur",
-    "types": ["Mobile Phones", "Gadgets", "Batteries", "Accessories"]
+    "types": ["Hazardous Waste", "Electronic Parts", "Industrial Waste"]
   },
  
   {
     "id": 5,
     "name": "Geocycle Philippines Misamis Oriental Plant",
-    "city": "Misamis Oriental",
+    "city": "Cagayan de Oro",
     "lat": 8.522981398767282,
     "lng": 124.75862575767113,
     "address": "GQF5+2CH, Nestle Tagoloan Warehouse, Tagoloan, Misamis Oriental",
     "types": ["Mobile Phones", "Gadgets", "Batteries", "Accessories"]
+  },
+
+  {
+    "id": "6",
+    "name": "SM City Cagayan de Oro (Uptown)",
+    "city": "Cagayan de Oro", 
+    "lat": 8.455918079343897,
+    "lng": 124.62339424163206,
+    "address": "Fr. Masterson Ave. cor. Gran Via St., Pueblo de Oro Township, Cagayan de Oro City",
+    "types": ["Mobile Phones", "Gadgets", "Batteries", "Accessories"]
+  },
+  {
+    "id": "7",
+    "name": "SM CDO Downtown Premier",
+    "city": "Cagayan de Oro",
+    "lat": 8.484381820693857,
+    "lng": 124.65490430906034,
+    "address": "Claro M. Recto Ave. cor. Osmeña St., Cagayan de Oro City",
+    "types": ["Mobile Phones", "Gadgets", "Batteries", "Accessories"]
+  },
+  {
+    "id": "8",
+    "name": "SM City General Santos",
+    "city": "General Santos City",
+    "lat": 6.116136808847283,
+    "lng": 125.18104929493988,
+    "address": "Santiago Blvd. cor. San Miguel St., General Santos City",
+    "types": ["Mobile Phones", "Gadgets", "Batteries", "Accessories"]
+  },
+  {
+    "id": "9",
+    "name": "SM City Butuan",
+    "city": "Butuan City",
+    "lat": 8.945586862855954,
+    "lng": 125.53344940905174,
+    "address": "J.C. Aquino Ave., Brgy. Lapu-lapu, Butuan City",
+    "types": ["Mobile Phones", "Gadgets", "Batteries", "Accessories"]
+  },
+  {
+    "id": "10",
+    "name": "SM City Mindpro",
+    "city": "Zamboanga City",
+    "lat": 6.907738340683514,
+    "lng": 122.07606496432929,
+    "address": "La Purisima St. cor. Campaner St., Brgy. Zone III, Zamboanga City",
+    "types": ["Mobile Phones", "Gadgets", "Batteries", "Accessories"]
+  },
+  {
+    "id": "11",
+    "name": "Globe E-Waste Zero Bin (SM City General Santos)",
+    "city": "General Santos City",
+    "lat": 6.116777539207506,
+    "lng": 125.18130485307341,
+    "address": "Globe Store, 2/F SM City General Santos, Santiago Blvd., General Santos City",
+    "types": ["Mobile Phones", "Cables", "Batteries", "Small Peripherals"]
+  },
+  {
+    "id": "12",
+    "name": "Globe E-Waste Zero Bin (Limketkai Mall)",
+    "city": "Cagayan de Oro",
+    "lat": 8.48278517145924,
+    "lng": 124.65594232907776,
+    "address": "Limketkai Center, Lapasan, Cagayan de Oro City",
+    "types": ["Mobile Phones", "Gadgets", "Batteries", "Cables"]
+  },
+  {
+    "id": "13",
+    "name": "Davao Thermo Biotech Corp.",
+    "city": "Davao City",
+    "lat": 7.088624979642618,
+    "lng": 125.62502291091519,
+    "address": "Puentespina Orchid Garden Compound, Bolcan St., Agdao, Davao City",
+    "types": ["Hazardous Waste", "Electronic Parts", "Industrial Waste"]
   }
 ]

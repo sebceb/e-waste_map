@@ -1,16 +1,18 @@
 "use client";
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Shield, Zap, Droplets, Trash2, ArrowRight, Menu, Image as ImageIcon, Cpu } from 'lucide-react';
+import { X, Shield, Zap, Droplets, Trash2, ArrowRight, Menu, Image as ImageIcon, Cpu, Smartphone, BarChart2 } from 'lucide-react';
 
 const MapNoSSR = dynamic(() => import('../components/Map'), { ssr: false });
 
 const CITY_COORDS = {
   "Davao City": [7.064, 125.608],
-  "Northern Mindanao": [7.447, 125.809],
-  "Digos": [6.757, 125.356],
-  "Panabo": [7.308, 125.682]
+  "Cagayan de Oro": [8.4803, 124.6498],
+  "General Santos City": [6.1433, 125.1929],
+  "Butuan City": [8.9475, 125.5406],
+  "Zamboanga City": [6.9044, 122.0761]
 };
 
 const CITIES = Object.keys(CITY_COORDS);
@@ -122,8 +124,11 @@ export default function Home() {
                 digital <br/> <span className="text-brand-yellow font-dispose uppercase">mindfulness</span>
             </h2>
             <p className="text-lg text-slate-500 leading-relaxed font-text border-l-2 border-brand-yellow pl-8 italic">
-                As we emerge in the digital landscape, waste from electronics are increasingly rising.
-                Rooted in mindfulness, minDISPOSE aims to make disposing of e-waste accessible throughout Mindanao. 
+                The theme, digital mindfulness, shows the core identity of minDISPOSE. 
+                The brand itself is established in Mindanao, strengthening local relevance and mindful digital disposal, 
+                which encourages responsibility in managing the electronic waste. As minDISPOSE supports sustainability, environmental awareness, 
+                and responsive digital habits, it presents itself as a movement that supports individuals and communities in Mindanao 
+                by raising awareness on e-waste.
             </p>
         </div>
 
@@ -132,7 +137,6 @@ export default function Home() {
           <div className="md:col-span-8 bento-card flex flex-col justify-between h-[450px]">
             <div className="flex justify-between items-start">
                 <Zap className="text-brand-yellow" size={48} />
-                <span className="text-[10px] font-mono opacity-40 uppercase">2022 National Statistics</span>
             </div>
             <div>
                 <h3 className="text-[10rem] font-black tracking-tighter text-brand-primary leading-none">537k</h3>
@@ -141,32 +145,51 @@ export default function Home() {
           </div>
           <div className="md:col-span-4 bento-card bg-brand-primary text-white flex flex-col justify-between overflow-hidden relative border-none">
             <Cpu size={120} className="absolute -right-10 -top-10 opacity-10" />
-            <Droplets size={40} className="text-brand-yellow" />
+            <BarChart2 size={40} className="text-brand-yellow" />
             <div className="space-y-4">
-                <h4 className="text-3xl font-dispose uppercase leading-tight">Watershed <br/> Security</h4>
-                <p className="text-sm text-white/60 leading-relaxed">Protecting the Davao aquifer from heavy metal leaching through systematic node mapping.</p>
+                <h4 className="text-3xl font-dispose text-brand-primary uppercase leading-tight">2022 National <br/> Statistics</h4>
+                <p className="text-sm text-brand-primary/60 leading-relaxed">
+                As of 2022, the country reached around 537,000 metric tons of e-waste, 
+                which indicates the necessity for effective waste disposal. The issue, in particular, comes to mind in parts of Mindanao 
+                where management facilities available for e-waste and awareness actions are limited.
+            </p>
             </div>
           </div>
         </div>
 
-        {/* Narrative & Photo Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="space-y-8">
-                <h4 className="text-sm font-black uppercase  text-brand-secondary">What is E-Waste?</h4>
-                <div className="space-y-6 text-slate-600 leading-relaxed text-lg font-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis, massa nec volutpat gravida, lectus ipsum sodales odio, aliquam finibus libero quam at risus. Vivamus fringilla leo dolor, luctus placerat ipsum pellentesque ac. Cras ipsum metus, dapibus vestibulum erat in, iaculis eleifend nunc. Cras posuere et tortor varius fermentum. Nulla et neque a felis rhoncus bibendum at finibus nibh. Fusce mattis vestibulum neque. Proin vitae sapien nisi.</p>
-                    <p className="font-bold text-brand-primary italic">Nam tortor velit, luctus eget massa sit amet, lobortis posuere massa.</p>
-                    <p>Aliquam at facilisis libero, id sollicitudin velit. Donec non justo mauris. Nam efficitur neque et velit vulputate volutpat. Morbi id nibh commodo, varius lectus quis, pellentesque magna. Fusce tincidunt dictum lacus, at pretium eros facilisis eu. </p>
+        {/* Combined Hero and Narrative Section */}
+        <div>
+          {/* Hero Photo */}
+          <div className="relative w-full h-[500px] md:h-[600px] rounded-[1.5rem] overflow-hidden">
+              <Image 
+                  src="/hero-ewaste.jpeg"
+                  alt="A collection of discarded electronic devices, illustrating e-waste."
+                  fill
+                  loading="eager"
+                  className="object-cover bg-brand-primary/5"
+              />      
+          </div>
+
+          <div className="text-right text-slate-600 italic">
+            <p>Photo by Antoine GIRET on Unsplash</p>
+          </div>
+
+          {/* Narrative Section */}
+          <div className="grid grid-cols-1 mt-8">
+              <div className="space-y-8 max-w-4xl mx-auto">
+                  <h4 className="text-sm font-black uppercase text-brand-secondary">What is E-Waste?</h4>
+                  <div className="space-y-6 text-slate-600 leading-relaxed text-lg font-text text-left">
+                      <p>E-waste refers to discarded or obsolete electronic devices such as cellphones, laptops, and appliances. These items have valuable materials, but some parts are hazardous, especially the battery, and it requires proper handling.</p>
+                      <p>E-waste is part of the fastest in increasing waste streams in the environment due to the rise of digital demands, and some electronics easily become useless. Some people upgrade devices without proper disposal, and this can lead to a lot of e-waste in landfills and less recycling.</p>
+                      <p>Improper disposal of e-waste can release hazardous substances such as lead, mercury, and cadmium. These can affect the pollution and contaminate the natural resources in our environment. This can also affect our health.</p>
+                      <p>In the Philippines, e-waste continues to increase reaching hundreds of thousands of metric tons produced yearly. In Mindanao, the e-waste becomes critical due to limited access to recycling areas and unawareness of safe disposal.</p>
+                      <p>As individuals and even as students, it is important to address the issue in terms of e-waste and properly dispose of old devices to help extend their lifespan. Small actions makes meaningful impact.</p>
+                      <p className="font-bold text-brand-primary italic">Digital mindfulness then becomes the understanding of the importance of consumption habits.</p>
+                      <p>Educational institutions can also encourage awareness by including sustainability and responsibility in the technology usage. Students may support the campaigns and the community to advocate proper e-waste disposal.</p>
+                      <p>Let’s take action and be part of the solution by practicing proper disposal, especially of electronics, supporting recycling, and spreading awareness to make our environment sustainable and responsible behavior.</p>
+                  </div>
                 </div>
-            </div>
-            <div className="grid grid-cols-2 gap-8">
-                <div className="aspect-[4/5] bg-brand-primary/5 rounded-[3.5rem] border-2 border-dashed border-brand-primary/10 flex items-center justify-center photo-placeholder">
-                    <ImageIcon className="text-brand-primary/10" size={64} />
-                </div>
-                <div className="aspect-[4/5] bg-brand-primary/5 rounded-[3.5rem] border-2 border-dashed border-brand-primary/10 flex items-center justify-center mt-16 photo-placeholder">
-                    <ImageIcon className="text-brand-primary/10" size={64} />
-                </div>
-            </div>
+          </div>
         </div>
       </section>
     </main>
